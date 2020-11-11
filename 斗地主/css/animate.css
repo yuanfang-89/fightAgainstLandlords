@@ -1,0 +1,175 @@
+/* 洗牌动画 */
+@keyframes run-1-0{
+    0%{
+        transform: scale3d(1,1,1) translateX(0px) translateY(0px) ;
+    }
+    25%{
+        transform: scale3d(0,0,0) translateX(2000px) translateY(500px) 
+    }
+    50%{
+        transform: scale3d(1,1,1) translateX(0px) translateY(0px) ;
+    }
+    75%{
+        transform: scale3d(0,0,0) translateX(-2000px) translateY(-500px);
+    }
+    100%{
+        transform: scale3d(1,1,1) translateX(0px) translateY(0px) 
+    }
+}
+@keyframes run-1-1{
+    0%{
+        transform: scale3d(1,1,1) translateX(0px) translateY(0px) ;
+    }
+    25%{
+        transform: scale3d(0,0,0) translateX(-2000px) translateY(-500px) ;
+    }
+    50%{
+        transform: scale3d(1,1,1) translateX(0px) translateY(0px) ;
+    }
+    75%{
+        transform: scale3d(0,0,0) translateX(2000px) translateY(500px) ;
+    }
+    100%{
+        transform: scale3d(1,1,1) translateX(0px) translateY(0px) ;
+    }
+}
+
+
+ /* 把桌面的三张牌使用动画方法翻开 */
+@keyframes run-2-0{
+        0%{
+            transform: translateX(0px) rotate3d(0,1,0,45deg) scale(1);
+            opacity: 1;
+        }
+        25%{
+            transform: translateX(-150px) rotate3d(0,1,0,90deg);
+        }
+        50%{
+            transform: translateX(-200px) rotate3d(0,1,0,-45deg) scale(1.5);
+            opacity: 0.5;
+        }
+        75%{
+            transform: translateX(-250px) rotate3d(0,1,0,-90deg) scale(0.5);
+        }
+        100%{
+            transform:  translateX(-300px) rotate3d(0,1,0,0deg) scale(1);
+            opacity: 1;
+        }
+}
+@keyframes run-2-1{
+    0%{
+        transform: translateX(0px) rotate3d(0,1,0,45deg) scale(1);
+        opacity: 1;
+    }
+    25%{
+        transform: translateX(0px) rotate3d(0,1,0,90deg);
+    }
+    50%{
+        transform: translateX(0px) rotate3d(0,1,0,-45deg) scale(1.5);
+        opacity: 0.5;
+    }
+    75%{
+        transform: translateX(0px) rotate3d(0,1,0,-90deg) scale(0.5);
+    }
+    100%{
+        transform:  translateX(0px) rotate3d(0,1,0,0deg) scale(1);
+        opacity: 1;
+    }
+}
+@keyframes run-2-2{
+    0%{
+        transform: translateX(0px) rotate3d(0,1,0,45deg) scale(1);
+        opacity: 1;
+    }
+    25%{
+        transform: translateX(150px) rotate3d(0,1,0,90deg);
+    }
+    50%{
+        transform: translateX(200px) rotate3d(0,1,0,-45deg) scale(1.5);
+        opacity: 0.5;
+    }
+    75%{
+        transform: translateX(250px) rotate3d(0,1,0,-90deg) scale(0.5);
+    }
+    
+    100%{
+        transform:  translateX(300px) rotate3d(0,1,0,0deg) scale(1);
+        opacity: 1;
+    }
+}
+
+/* 发牌动画 */
+@keyframes run-3-0{
+    0%{
+        transform: scale(1) rotate(50deg) translateX(0px);
+    }
+    30%{
+        transform: scale(2) rotate(100deg) rotate3d(0,1,0,-45deg);
+    }
+    60%{
+        transform: scale(0.5) rotate(-100deg) rotate3d(0,1,0,95deg);
+    }
+    100%{
+        transform: scale(1) rotate(0) translateX(-600px) translateY(250px);
+    }
+}
+
+/* 牌组爆炸效果 */
+@keyframes run-4-0{
+    0%{
+        transform: scale(0.5);
+        opacity: 0.7;
+    }
+    50%{
+        transform: scale(2);
+        opacity: 1;
+    }
+    100%{
+        transform: scale(2);
+        opacity: 0;
+    }
+}
+
+/* 牌组飞机的动画效果 */
+@keyframes run-4-1{
+    0%{
+        transform:scale(2) translateX(-1000px);
+        
+    }
+    50%{
+        transform: scale(2) translateX(3000px);
+       
+    }
+    100%{
+        transform: scale(2) translateX(0px);
+        opacity: 0;
+       
+    }
+}
+/* 牌组顺子的动画效果 */
+@keyframes run-4-2{
+    0%{
+        transform: translateY(-100px);
+    }
+    50%{
+        transform: translateY(1000px);
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 0;
+    }
+}
+/* 王炸效果动画 */
+@keyframes run-4-3{
+    0%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(-2000px);
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 0;
+    }
+    
+}

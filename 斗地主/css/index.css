@@ -1,0 +1,605 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+em{
+    font-style: normal;
+}
+
+html,body{
+    min-width: 1200px;
+    overflow: hidden;
+    background: url(../images/bg.jpeg) no-repeat;
+    background-size: cover;
+    -webkit-user-select:none; 
+    -moz-user-select:none; 
+    -ms-user-select:none; 
+    user-select:none;                               /* 去点文字一直点击出现蓝色的背景 */
+}
+.bg{
+    display: block;
+    width: 100%;
+    z-index: -1;
+    position: absolute;
+}
+
+.container{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    min-width: 1200px;
+    position: absolute;
+    /* background: url(./); */
+}
+ .left{                                 /* 左 */
+    width:20%;
+    height: 100%;
+    float: left;
+}
+.mid{                                   /* 中 */
+    width:60%;
+    height: 100%;
+    float: left;
+}
+.right{                                 /* 右 */
+    width:20%;
+    height: 100%;
+    float: right;
+}
+.mid_top{                               /* 展示区域 */
+    width: 100%;
+    height: 65%;
+    float: left;
+}
+.mid_end{                               /* 玩家区域 */
+    width: 100%;
+    height: 35%;
+    float: left;
+    /* background-color: antiquewhite; */
+}
+
+.all_poker{
+    width: 125px;
+    height: 175px;
+    margin: 100px auto 0px;
+    position: relative;
+}
+.all_poker li{
+    position: absolute;
+    border-radius: 3px;
+}
+.temp_poker{
+    width: 125px;
+    height: 175px;
+    margin: 100px auto 0px;
+    position: relative;
+}
+.back {
+    width:125px;
+    height: 175px;
+    border-radius: 3px;
+    background: url(../images/14.png) -88px -224px;
+    position: absolute;
+    z-index: 100;
+}
+.play_1{
+    width: 175px;
+    height: 600px; 
+    position: relative;
+    left: 7%;
+    top: 3%;
+}
+.play_2{
+    width: 600px;
+    height: 175px;
+    position: relative;
+}
+
+.play_3{
+    width: 175px;
+    height: 600px;
+    /* padding: 40px; */
+    position: relative;
+    top: 3%;
+    left: 55%;
+    
+}
+.play_1 li,.play_2 li,.play_3 li{
+    position: absolute;
+    border-radius: 3px;
+}
+.get-boss {
+    display: none;
+}
+.mid .get-boss .get,
+.mid .get-boss .cancel,
+.mid .play-btn .tishi,
+.mid .play-btn .play,
+.mid .play-btn .cancel{
+    width: 60px;
+    height: 30px;
+    display: block;
+    float: left;
+    margin: 0 10px 0 20px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    background: brown;
+    z-index: 99;
+}
+.left .get-boss .get,
+.left .get-boss .cancel,
+.right .get-boss .get,
+.right .get-boss .cancel,
+.left .play-btn .tishi,
+.left .play-btn .play,
+.left .play-btn .cancel,
+.right .play-btn .tishi,
+.right .play-btn .play,
+.right .play-btn .cancel{
+    width: 60px;
+    height: 30px;
+    display: block;
+    margin: 0 0 20px 0;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    background: brown;
+    z-index: 99;
+    
+}
+.play_1 .on{
+    left:20px;
+}
+.play_2 .on {
+    top:-20px;
+}
+.play_3 .on{
+    left: -20px;
+}
+.play-btn {
+    display: none;
+    /* float: left; */
+}
+.popup{
+    width: 400px;
+    height: 250px;
+    display: none;
+    background: rgb(29,42,71,.9);
+    border-radius: 15px;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    margin-left: -200px;
+    text-align: center;
+    z-index: 200;
+}
+.popup .txt{
+    width: 350px;
+    height: 150px;
+    display: block;
+    margin: 0 auto;
+    line-height: 150px;
+    font-size: 22px;
+    text-align: center;
+    color: rgb(236, 222, 241);
+}
+.popup a.confirm{
+    width: 70px;
+    height: 50px;
+    display: block;
+    margin: 0 auto;
+    background: rgb(99,17,24);
+    color: rgb(156,134,84);
+    border-radius: 8px;
+    line-height: 50px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+
+
+.left-computer{
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+.right-computer{
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+.computer-console{
+    width: 100%;
+    height: 22%;
+}
+.computer-info{
+    width: 50%;
+    height: 100%;
+}
+.left .computer-info{
+    float: left;
+}
+.right .computer-info{
+    float: right;
+}
+.computer-status{
+    width: 40%;
+    height: 100%;
+}
+.left .computer-status{
+    float: right;
+    position: absolute;
+    top: 0%;
+    left: 60%;
+}
+.right .computer-status{
+    float: right;
+    position: absolute;
+    top: 0%;
+    left: 5%;
+}
+.left .cards{
+    width: 100%;
+    height: 80%;
+    position: relative;
+}
+.right .cards{
+    width: 100%;
+    height: 80%;
+    position: relative;
+}
+.player-status{
+    /* background-color: blueviolet; */
+    width: 100%;
+    height: 20%;
+}
+.player-console{
+    width: 100%;
+    height: 80%;
+}
+.player-info{
+    position: relative;
+    float: left;
+    width: 20%;
+    height: 100%;
+}
+
+/* 玩家1的头像 */
+.headrole1,.headrole2,.headrole3{
+    /* width: 100%;
+    height: 100%; */
+    border-radius: 200px;
+    box-sizing: border-box;
+    background-color: honeydew;
+    background-size: cover;
+    background-position: 5px 0px;
+}
+/* 玩家0的头像 */
+.headrole1{
+    /* height: 200px; */
+    width: 100%;
+    height: 80%;
+    background-image: url(../images/head_portrait02.png);
+}
+.headrole2{
+    /* height: 200px; */
+    /* height: 100%; */
+    width: 90%;
+    height: 70%;
+    background-image: url(../images/head_portrait01.png);
+}
+.headrole3{
+    /* height: 200px; */
+    width: 100%;
+    height: 80%;
+    background-image: url(../images/head_portrait03.png);
+}
+
+.player1,.player2,.player3{
+    /* width: 80%; */
+    position: relative;
+    bottom: 20px;
+    /* left: 0px; */
+    /* right: 0px; */
+    height: 25px;
+    line-height: 25px;
+    color: white;
+    font-size: 18px;
+    background-color:  rgba(0, 0, 0, 0.5);
+}
+.player1{
+    width: 100%;
+}
+.player2{
+    width: 80%;
+    left: 5px;
+}
+.player3{
+    width: 100%;
+    /* right: 20px; */
+}
+
+.player span{
+    margin: 0 5px;
+    position: relative;
+    float: left;
+}
+.player-roles{
+    height: 25px;
+    padding-left: 77px;
+    /* float: left; */
+}
+#dizhu{
+    background: url(../images/dizhu.png) no-repeat;
+}
+#nongmin{
+    background: url(../images/nongmin.png) no-repeat;
+}
+.player-name{ 
+    float: left;
+}
+.mid .cards{
+    float: left;
+    /* background-color: beige; */
+    width: 80%;
+    height: 100%;
+}
+
+.jindou{
+    display: block;
+    background: url(../images/jindou.png) no-repeat;
+    padding-left: 25px;
+    height: 25px;
+    position: relative;
+    left: 0;
+    bottom: 20px;
+    font-weight: bold;
+    color: #fff;
+}
+.all_poker{
+    width: 125px;
+    height: 175px;
+    margin: 100px auto 0px;
+    position: relative;
+    /* background: url(../images/0.png) -88px -224px; */
+    /* background: #fff; */
+}
+.all_poker li{
+    position: absolute;
+}
+.temp_poker{
+    width: 125px;
+    height: 175px;
+    margin: 100px auto 0px;
+    position: relative;
+}
+
+/* 背景牌 */
+.back {
+    width:125px;
+    height: 175px;
+    border-radius: 3px;
+    background: url(../images/14.png) -88px -224px;
+    position: absolute;
+    z-index: 100;
+}
+
+/* 定时器样式 */
+.timer{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    margin: -231px 0px 0px 0px;
+    padding: 51px 0px 0 42px;
+    background: url(../images/time.png) no-repeat;
+    background-size: 100%;
+    z-index: -2;
+    display: none;
+ 
+   
+}
+.timer .time {
+    font-size: 25px;
+    font-weight: 100;
+    text-align: center;
+    position: absolute;
+    left: 114px;
+    top: 93px;
+    color: black;
+}
+/* 结算 */
+.end{
+    width: 600px;
+    height: 350px;
+    display: none;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    margin-left: -300px;
+    text-align: center;
+    background: rgba(255, 252, 234);
+    border-radius: 15px;
+    z-index: 200;
+}
+.end .role-wrap{
+    position: absolute;
+    top: 32px;
+    left: 8px;
+    width: 203px;
+    height: 233px;
+    cursor: pointer;
+    z-index: 8;
+    background: url(../images/role.png) -406px 0 no-repeat;
+    background-size: 1015px 233px;
+}
+.end .result{
+    width: 100%;
+    height: 30%;
+    display: block;
+    color: gold;
+    font-size: 30px;
+    line-height: 100px;
+    font-weight: bold;
+    letter-spacing: 20px;
+}
+.end .info{
+    width: 100%;
+    height: 40%;
+}
+.end .info span{
+    width: 100%;
+    height: 33.33%;
+    display: block;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 5px;
+}
+.end .multinfo{
+    width: 100%;
+    height: 30%;
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    padding-top: 20px;
+}
+.end .goback{
+    width: 15%;
+    height: 15%;
+    
+    position: absolute;
+    left: 50px;
+    bottom: 15px;
+    border-radius: 20px;
+    background: rgb(158,110,52);
+    color:rgb(126, 12, 20);
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 50px;
+
+}
+.end .again{
+    width: 15%;
+    height: 15%;
+    position: absolute;
+    right: 50px;
+    bottom: 15px;
+    border-radius: 20px;
+    background: rgb(158,110,52);
+    color:rgb(126, 12, 20);
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 50px;
+}
+
+/* 背景音乐 */
+.music-control{
+    width: 43px;
+    height: 43px;
+    cursor: pointer;
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    z-index: 100;
+}
+.music-on,.music-stop{
+    width: 43px;
+    height: 43px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+.music-on{
+    background: url(../images/music_stop.png) 0px 0px no-repeat;
+}
+.music-stop{
+    background: url(../images/music_on.png) 0px 0px no-repeat;
+    animation: music-control 3s linear infinite;
+}
+@keyframes music-control{
+    0%{transform: rotate(0deg);}
+    50%{transform: rotate(180deg);}
+    100%{transform: rotate(360deg);}
+}
+.imgBox{
+    /* width: 500px;
+    height: 500px; */
+    position: absolute;
+    left: 10%;
+    top: 0px;
+    z-index: 9;
+}
+.imgBox .boom{
+    position: absolute;
+    display: none;
+}
+.imgBox .boom img{
+    position: absolute;
+   
+}
+.imgBox .boom .boom1{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left: 330px;
+    top: 310px;
+}
+.imgBox .boom .boom2{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    left: 750px;
+    top: 33px;
+}
+.imgBox .boom .boom3{
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    left: 500px;
+    top: 70px;
+}
+.imgBox .boom .boom4{
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    left: 760px;
+    top: 56px;
+
+}
+.imgBox .boom .boom5{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left: 700px;
+    top: 56px;
+
+}
+.imgBox .airport{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    display: none;
+}
+.imgBox .shunzi{
+    position: absolute;
+    left: 320px;
+    top: 0px;
+    display: none;
+}
+.imgBox .zha{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 600px;
+    left: 500px;
+    display: none;
+
+}

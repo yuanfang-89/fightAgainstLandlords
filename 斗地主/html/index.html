@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>斗地主主页面</title>
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/animate.css">
+    <script type="text/javascript" src="../js/jquery-3.5.1.min.js"></script>
+    <script src="../js/animation.js"></script>
+    <script src="../js/public.js"></script>
+    <script type="text/javascript" src="../js/game.js"></script>
+</head>
+<body>
+    <div class="music-control" id="music_control">
+        <div class="music-on" id="music_stop"></div>
+        <div class="music-stop" id="music_on" style="display: none;"></div>
+    </div>
+    <video style="display: none;" src="../music/bgmusic.mp3" loop preload="auto" id="music"></video>
+    <div class="container">
+        <div class="left">
+            <div class="left-computer">
+                <div class="computer-console">
+                    <div class="computer-info">
+                        <div class="headrole1"></div>
+                        <div class="player1">
+                            <span class="player-name" id="player-name">依米</span>
+                            <span class="player-roles" id="nongmin"> </span>
+                        </div>
+                        <span class="jindou" id="jindou">3750</span>
+                    </div>
+                </div>
+                <div class="cards">
+                    <ul class="play_1"></ul>
+                    <nav class="computer-status">
+                        <div class="get-boss">
+                            <button class="get">抢地主</button>
+                            <button class="cancel">不抢</button>
+                        </div>
+                        <div class="play-btn">
+                            <button class="tishi">提示</button>
+                            <button class="play">出牌</button>
+                            <button class="cancel">过牌</button>
+                        </div>
+                        <div class="timer">
+                            <p class="time"></p>
+                        </div>     
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <div class="mid">
+            <div class="mid_top">
+                <ul class="all_poker">
+                </ul>
+            </div>
+            <div class="mid_end">
+                <nav class="player-status">             <!--状态栏 -->
+                    <div class="get-boss">
+                        <button class="get">抢地主</button>
+                        <button class="cancel"> 不抢</button>
+                    </div>
+                    <div class="play-btn">
+                        <button class="tishi">提示</button>
+                        <button class="play">出牌</button>
+                        <button class="cancel">过牌</button>
+                    </div>
+                    <div class="timer">
+                        <p class="time"></p>
+                    </div>     
+                </nav>            
+                <div class="player-console">            <!-- 操作台 -->
+                    <div class="player-info">
+                        <div class="headrole2"></div>     <!-- 玩家头像、角色、id-->
+                        <div class="player2">
+                            <span class="player-name" id="player-name">袁林芳</span>
+                            <span class="player-roles" id="dizhu"> </span>
+                        </div>
+                        <span class="jindou" id="jindou">3750</span>
+                    </div>       
+                    <div class="cards">
+                        <ul class="play_2"></ul>  <!-- 手牌 -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <div class="right-computer">
+                <div class="computer-console">
+                    
+                    <div class="computer-info">
+                        <div class="headrole3"></div>
+                        <div class="player3">
+                            <span class="player-name" id="player-name">大红花🌸</span>
+                            <span class="player-roles" id="nongmin"> </span>
+                        </div>
+                        <span class="jindou" id="jindou">3750</span>
+                    </div>
+                </div>
+                <div class="cards">
+                    <ul class="play_3"></ul>
+                    <nav class="computer-status"> 
+                        <div class="get-boss">
+                            <button class="get">抢地主</button>
+                            <button class="cancel">不抢</button>
+                        </div>
+                        <div class="play-btn">
+                            <button class="tishi">提示</button>
+                            <button class="play">出牌</button>
+                            <button class="cancel">过牌</button>
+                        </div>
+                        <div class="timer">
+                            <p class="time"></p>
+                        </div>     
+                    </nav>
+                </div>
+            </div>
+        </div>
+
+        <div class="popup">
+            <p class="txt">哈哈哈哈哈</p>
+            <a class="confirm">确认</a>
+        </div>
+        <div class="end">
+            <a class="role-wrap"></a>
+            <span class="result">地主赢了</span>
+            <div class="info">
+                <span>xx:1200</span>
+                <span>xx:1300</span>
+                <span>xx:1400</span>
+            </div>
+            <span class="multinfo">倍数：2倍</span>
+            <a href="../html/start.html" class="goback">返回首页</a>
+            <div class="again">再来一局</div>
+        </div>
+        <div class="music1" style="position: absolute;">
+            <audio id="xipai" src="../music/xipai.mp3"></audio>
+        </div>
+        <audio class="music2" autoplay loop>
+            
+        </audio>
+        <div class="imgBox">
+            <div class="boom">
+                <img class ="boom1" src="../images/boom.png" alt="">
+                <img class ="boom2" src="../images/boom.png" alt="">
+                <img class ="boom3" src="../images/boom.png" alt="">
+                <img class ="boom4" src="../images/boom.png" alt="">
+                <img class ="boom5" src="../images/boom.png" alt="">
+            </div>
+            <img class = "airport" src="../images/airport.png" alt="">
+            <img class = "shunzi"src="../images/shunzi.png" alt="">
+            <img class = "zha" src="../images/huojian.png" alt="">
+        </div>
+    </div>
+    
+</body>
+</html>
